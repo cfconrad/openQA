@@ -284,7 +284,7 @@ sub clone_job {
     delete $settings{NAME};    # usually autocreated
     if ($depth == 0 or $options{'parental-inheritance'}) {
         for my $arg (@ARGV) {
-            if ($arg =~ /([A-Z0-9_]+)=(.*)/) {
+            if ($arg =~ /([A-Z0-9_]+)=(.+)?/) {
                 if (defined $2) {
                     $settings{$1} = $2;
                 }
